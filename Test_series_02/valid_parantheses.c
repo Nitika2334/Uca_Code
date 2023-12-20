@@ -7,24 +7,24 @@ bool isValidPararnthesis(char *str){
     int top=-1;
 
     while(*str){
-        if(*str=="[" || *str=="{" || *str=="("){
+        if(*str=='[' || *str=='{' || *str=='('){
             stack[++top]=*str;
-        }else if(*str=="]"){
-            if(top==-1 || stack[top]!="["){
+        }else if(*str==']'){
+            if(top==-1 || stack[top]!='['){
                 return false;
             }
             else{
                 top--;
             }
-        }else if(*str=="}"){
-            if(top==-1 || stack[top]!="{"){
+        }else if(*str=='}'){
+            if(top==-1 || stack[top]!='{'){
                 return false;
             }
             else{
                 top--;
             }
-        }else if(*str==")"){
-            if(top==-1 || stack[top]!="("){
+        }else if(*str==')'){
+            if(top==-1 || stack[top]!='('){
                 return false;
             }
             else{
