@@ -41,7 +41,6 @@ int pop(struct Stack* stack){
     if(isempty(stack)){
         return -1;
     }
-    int item=stack->array[stack->top];
     return stack->array[stack->top--];
 }
 

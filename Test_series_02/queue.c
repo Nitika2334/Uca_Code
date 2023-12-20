@@ -44,6 +44,7 @@ int dequeue(struct Queue* que){
     int x=que->array[que->front];
     que->front=que->front+1;
     que->size=que->size-1;
+    return x;
 }
 
 int front(struct Queue* que){
