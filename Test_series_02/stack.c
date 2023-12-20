@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct Stack{
     int top;
@@ -28,11 +29,12 @@ int peek(struct Stack* stack){
     return stack->array[stack->top];
 }
 void push(struct Stack* stack,int item){
-    if(!isfull(stack)){
+    if(isfull(stack)){
+        printf("Staack is full");
         return;
     }
     stack->array[++stack->top]=item;
-    printf("pushed item:%d",item);
+    printf("pushed item:%d\n",item);
 }
 
 int pop(struct Stack* stack){
@@ -44,5 +46,10 @@ int pop(struct Stack* stack){
 }
 
 int main(){
-
+    struct Stack* str=create(10);
+    push(str,10);
+    push(str,20);
+    push(str,30);
+    printf("poped item %d",pop(str));
+    return 0;
 }
