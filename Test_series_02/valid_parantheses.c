@@ -38,10 +38,10 @@ bool isValidPararnthesis(char *str){
 
 int main(){
     //input1
-    char str1="{}{}[]";
+    char str1[]="{}{}[]";
     printf("%d",isValidPararnthesis(str1));
 
     //input2
-    char str2="({[})";
+    char str2[]="({[})";
     printf("%d",isValidPararnthesis(str1));
 }
